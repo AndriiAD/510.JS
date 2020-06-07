@@ -1,4 +1,4 @@
-// task 1 
+// **********************   task - 1  ********************
 
 // let mentor = { 
 //     course: 'JS fundamental', 
@@ -16,7 +16,7 @@
  
 
 
-// // task 2
+// **********************   task - 2  ********************
 
 // let country = {
 //     name: 'Ukraine',
@@ -36,7 +36,7 @@
 
 
 
-// // task 3
+// **********************   task - 3  ********************
 
 // class Person {
 //     constructor (name, surname) {
@@ -71,7 +71,7 @@
 
 
 
-// // task 4 
+// **********************   task - 4  ********************
 
 // class Worker {
 //     constructor (fullName, dayRate, workingDays){
@@ -79,6 +79,7 @@
 //         this.dayRate = dayRate;
 //         this.workingDays = workingDays;
 //     }
+
 // // 1
 //     showSalary () {
 //         let result = this.dayRate * this.workingDays;
@@ -88,7 +89,7 @@
 //     #experience = 1.2;
 
 //     showSalaryWithExperience () {
-//         return this.dayRate * this.workingDays * this.#experience;
+//         return this.showSalary() * this.#experience;
 //     }
 // // 3
 //     get setExp() {
@@ -148,76 +149,76 @@
 
 
 
-// task 5
+// **********************   task - 5  ********************
 
-class GeometricFigure {
-    getArea() {
-        return 0;
-}
-    toString() {
-        return Object.getPrototypeOf(this).constructor.name;
-}
-}
-class Triangle extends GeometricFigure {
-    constructor (side1, side2, side3) {
-        super();
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
-    }
+// class GeometricFigure {
+//     getArea() {
+//         return 0;
+// }
+//     toString() {
+//         return Object.getPrototypeOf(this).constructor.name;
+// }
+// }
+// class Triangle extends GeometricFigure {
+//     constructor (side1, side2, side3) {
+//         super();
+//         this.side1 = side1;
+//         this.side2 = side2;
+//         this.side3 = side3;
+//     }
 
-    static getArea() {
-        return this.side1 * this.side2 * this.side3;
-}
+//     static getArea() {
+//         return this.side1 * this.side2 * this.side3;
+// }
 
-}
-class Square extends GeometricFigure {
-    constructor (sqrSize) {
-        super();
-        this.sqrSize = sqrSize;
-    }
+// }
+// class Square extends GeometricFigure {
+//     constructor (sqrSize) {
+//         super();
+//         this.sqrSize = sqrSize;
+//     }
 
-    static getArea() {
-        return Math.pow(this.sqrSize, 2);
-    }
+//     static getArea() {
+//         return Math.pow(this.sqrSize, 2);
+//     }
 
-}
-class Circle extends GeometricFigure {
-    constructor (radius) {
-        super();
-        this.radius = radius;
-    }
+// }
+// class Circle extends GeometricFigure {
+//     constructor (radius) {
+//         super();
+//         this.radius = radius;
+//     }
 
-    static getArea() {
-        return Math.PI * Math.pow(this.radius, 2);
-    }
+//     static getArea() {
+//         return Math.PI * Math.pow(this.radius, 2);
+//     }
 
-}
-
-
-//2
-function handleFigures () {
-
-    console.log(Triangle instanceof GeometricFigure);
-    console.log(Square instanceof GeometricFigure);
-    console.log(Circle instanceof GeometricFigure);
+// }
 
 
-    console.log(GeometricFigure.name + ': ' + Triangle.name + ': ' + Triangle.getArea());
-    console.log(GeometricFigure.name + ': ' + Square.name + ': ' + Square.getArea());
-    console.log(GeometricFigure.name + ': ' + Circle.name + ': ' + Circle.getArea());
+// //2
+// function handleFigures () {
 
-    var figures = [Triangle.getArea(), Square.getArea(), Circle.getArea()];
-    return figures.reduce(totalArea);
+//     console.log(Triangle instanceof GeometricFigure);
+//     console.log(Square instanceof GeometricFigure);
+//     console.log(Circle instanceof GeometricFigure);
+
+
+//     console.log(GeometricFigure.name + ': ' + Triangle.name + ': ' + Triangle.getArea());
+//     console.log(GeometricFigure.name + ': ' + Square.name + ': ' + Square.getArea());
+//     console.log(GeometricFigure.name + ': ' + Circle.name + ': ' + Circle.getArea());
+
+//     var figures = [Triangle.getArea(), Square.getArea(), Circle.getArea()];
+//     return figures.reduce(totalArea);
     
-    function totalArea(figure1, figure2, figure3) {
-      return figure1 + figure2 + figure3;
-    } 
+//     function totalArea(figure1, figure2, figure3) {
+//       return figure1 + figure2 + figure3;
+//     } 
 
-    console.log(totalArea());
-}
+//     console.log(totalArea());
+// }
 
-//result
-const figures = [new Triangle(4, 5, 3), new Square(7), new Circle(5)];
+// //result
+// const figures = [new Triangle(4, 5, 3), new Square(7), new Circle(5)];
 
-console.log(handleFigures(figures));
+// console.log(handleFigures(figures));

@@ -33,7 +33,7 @@
 // }
 
 
-// // task 3
+// task 3
 // let k = [];
 
 // function randArray (i) {
@@ -62,22 +62,26 @@
 
 // // task 5
 // // get lost on this task
-// function findMin(arguments) {
-//         let result = 1;
-//         for (let i = 0; i < arguments.length; i++) {
-//                 result = Math.min(arguments);
+
+// // I copy the solution form Oleg
+// function findMin() {
+//         let result = arguments[0];
+//         for (let i = 1; i < arguments.length; i++) {
+//                 if (arguments[i] < result) {
+//                         result = arguments[i];
+//                 }
 //         }
 //         console.log(result);
 //      }
-//      findMin(2, 0, 4, 5);   
+//      findMin(10, 22, -4, 5);   
 
 
-// function findMin(arguments) {
-//         let myArray = [arguments];
+// function findMin() {
+//         let myArray = arguments[0];
 //        console.log(Math.min(myArray));
 // }
 
-// findMin (5, 4, 67, -4, 1);
+// findMin (44, 4, 67, -4, 1);
 
 
 
@@ -86,8 +90,8 @@
 
 // function findUnique(arr) {
         
-        // // solution 1
-
+        // solution 1
+        
         // for (let i = 0; i < arr.length; i++) { 
         //         for (let j = i + 1 ; j < arr.length; j++) { 
         //                 if (arr[i] == arr[j]) {
@@ -107,43 +111,58 @@
         //                 console.log(false);
         //         }
 
-        // solution 3
+        // // solution 3
 
-//         if (arr.Unique == true) {
-//                 console.log(true);
-//         } else  {
-//                 console.log(false);
-//         }
-// }
-// findUnique ([1, 2, 5, 4, 5])
+        // if (arr.Unique == true) {
+        //         console.log(true);
+        // } else  {
+        //         console.log(false);
+        // }
+
+
+// }findUnique ([1, 2, 33, 4, 5]);
 
 
 
 // task 7
-let myArray = [];
+// I copy this solution from Oleg
 
-function lastElem(myArray, x) {
-        if (x == null) {
-                x = 1;
-        }
-        if (myArray == null) {
-                return void 0;
-        }
-        return result = myArray[myArray.lenght - x]
-}
+// let myArray = [];
 
-lastElem([3, 4, 10, -5], 2);
+// function lastElem(myArray, count) {
+//         if (count == null) {
+//                console.log(myArray.slice(-1)[0]);
+//         } else {
+//                 console.log(myArray.slice(-count));
+//         }
+      
+// }
 
+// lastElem([3, 4, 10, -5], 3);
 
 
 // task 8
 
-// function titleCase(str){
-//         var array = str.split(' ');
-//         for(var c = 0; c < array.length; c++){
-//             array[c] = array[c][0].toUpperCase() + array[c].substring(1);
+function titleCase(str){
+        var array = str.split(' ');
+        for(var i = 0; i < array.length; i++){
+            array[i] = array[i][0].toUpperCase() + array[i].substring(1);
+        }
+    return array.join(' ');
+    }
+    
+    console.log(titleCase('i love java script. do you?'));
+
+
+//     //  solution from Oleg
+
+//     function titleCase(str){
+//         let oldArray = str.split('');
+//         let array = [];
+//         for (var i = 0; i < oldArray.length; i++) {
+//             array.push(oldArray[i].charAt(0).toUpperCase()+oldArray[i].slice(1));
 //         }
 //     return array.join(' ');
 //     }
     
-//     'I love java script';
+//     console.log(titleCase('I love java script'));
