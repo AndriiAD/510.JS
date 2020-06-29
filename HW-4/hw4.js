@@ -151,17 +151,17 @@
 
 // function showMonthName(month) {
 //     month = month - 1;
-//     let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+//     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-//     if (month[month] !== undefined) {
-//         return month[month];
+//     if (months[month] !== undefined) {
+//         return months[month];
 //     } else {
-//         throw 'Incorrect month number. Please Enter the valide number.';
+//         throw new Error ('Incorrect month number. Please Enter the valide number.');
 //     }
 // }
 
 // try {
-//     var myMonth = showMonthName(12);
+//     var myMonth = showMonthName(3);
 //     console.log(myMonth);
 // } catch (e) {
 //     myMonth = 'unknown';

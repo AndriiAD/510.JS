@@ -123,9 +123,29 @@
 // }findUnique ([1, 2, 33, 4, 5]);
 
 
+// solution from Oleg
+
+function findUnique(arr) {
+    for (i = 0; i < arr.length; i++) {
+        let k = arr[i];
+        for (j = 0; j < arr.length; ++j) {
+            if (i === j) {
+                continue;
+            } else if (k === arr[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+findUnique([1, 2, 3, 5, 3]);
+
+
+
+
 
 // task 7
-// I copy this solution from Oleg
+// solution from Oleg
 
 // let myArray = [];
 
@@ -143,15 +163,15 @@
 
 // task 8
 
-function titleCase(str){
-        var array = str.split(' ');
-        for(var i = 0; i < array.length; i++){
-            array[i] = array[i][0].toUpperCase() + array[i].substring(1);
-        }
-    return array.join(' ');
-    }
+// function titleCase(str){
+//         var array = str.split(' ');
+//         for(var i = 0; i < array.length; i++){
+//             array[i] = array[i][0].toUpperCase() + array[i].substring(1);
+//         }
+//     return array.join(' ');
+//     }
     
-    console.log(titleCase('i love java script. do you?'));
+//     console.log(titleCase('i love java script. do you?'));
 
 
 //     //  solution from Oleg
