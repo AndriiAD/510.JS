@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <button id='myButton' onclick="loadData()">Vote!</button>
+
+  <script>
+    function loadData() {
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('GET', 'data-12.js', true); 
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // error processing
+          alert('Error ' + xhr.status + ': ' + xhr.statusText);
+        } else {
+          // display result            
+          document.getElementById("myButton").innerHTML = xhr.responseText;
+        }
+      }
+      xhr.send();
+    }
+  </script>
+
+</body>
+
+</html>

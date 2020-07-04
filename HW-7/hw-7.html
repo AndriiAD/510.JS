@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- ****************  task  1  ************************ -->
+
+<script>    
+   // variat 1
+   var myTab = window.open("https://avramkinandrii.wixsite.com/website", "avramkinandrii", "width=300,height=300,left=700,top=500");
+
+    myTab.window.setTimeout(myTab, 2000);
+    myTab.window.resizeTo(500, 500);
+    myTab.window.setTimeout(myTab, 2000);
+    myTab.window.moveTo(200,200);
+    myTab.window.setTimeout(myTab, 2000);
+    myTab.window.close();
+
+
+    // varian 2
+        // var myTab = window.open("https://avramkinandrii.wixsite.com/website", "avramkinandrii", "width=300,height=300,left=900,top=300");
+    
+        // setTimeout(function() {myTab = resizeTo(500, 500);}, 2000);
+        
+        // myTab = setTimeout(moveTab, 2000);
+
+        // function moveTab() {
+        //     myTab = moveTo(200,200);
+        // }
+
+        // myTab = setTimeout(closeTab, 2000);
+        
+        // function closeTab() {
+        //     myTab = close("https://avramkinandrii.wixsite.com/website", "avramkinandrii");
+        // }
+</script>  
+
+
+<!-- ****************  task  2  ************************ -->
+
+<!-- <p id ='text'>I learning JavaScript events!</p> 
+<div>
+	<button type="button" onclick="changeCSS()" id="myBtn">Change style!</button>
+</div>
+
+<script>
+    function changeCSS() {
+        document.getElementById('text').style.color = 'orange';
+        document.getElementById('text').style.fontFamily = 'Comic Sans MS';
+        document.getElementById('text').style.fontSize = '12px';
+    }
+</script> -->
+
+
+<!-- ****************  task  3  ************************ -->
+
+<!-- <div class="myDiv">
+    <button type="button" onclick="changeFone()" id="myBtn1">Click here to make the fone blue</button>
+    <button type="button" id="myBtn2">Click here to make the fone pink</button>
+    <button type="button" id="myBtn3">Click here to make the fone brown</button>
+    <a href="https://www.google.com.ua">Hover over this link to make the fone yellow</a>
+</div>
+
+<script>
+    function changeFone() {
+        document.getElementById('myBtn1').style.backgroundColor = 'lightblue';
+    }
+    myBtn2.onclick = function() { 
+        document.getElementById('myBtn2').style.backgroundColor = 'pink' 
+    } 
+    myBtn3.addEventListener("click", function() { 
+        myBtn3.style.backgroundColor = 'brown' 
+    } );
+
+    document.getElementsByTagName('a').mouseover = function() {
+        document.getElementsByClassName('myDiv').style.color = 'yellow';
+    }
+    document.getElementsByTagName('a').mouseout = function() {
+        document.getElementsByClassName('myDiv').style.color = 'white';
+    }
+</script> -->
+
+
+<!-- ****************  task  4  ************************ -->
+
+<!-- <form name="myCars">
+<label for="cars">Choose a car:</label>
+
+<select id="cars">
+  <option value="Volvo">Volvo</option>
+  <option value="Saab">Saab</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Audi">Audi</option>
+  <option value="Tesla">Tesla</option>
+</select>
+
+<button type="button" onclick="SelAndDel()" id="myBtn1">Select and Delete</button>
+</form>
+
+<script>
+    function SelAndDel() {
+        let x = document.getElementById('cars');
+        x.remove(x.selectedIndex);
+        alert('Your car ' + x.value + ' was deleted from the list!');
+    }
+</script> -->
+
+
+<!-- ****************  task  5  ************************ -->
+
+<!-- <button type="button" id="myButton">Live button!</button>
+<div id='myDiv'>statuses:<br></div>
+
+<script>
+    myButton.addEventListener("click", function() { 
+        myDiv.innerHTML += 'I was pressed!<br>';
+    } );
+    myButton.addEventListener("mouseover", function() { 
+        myDiv.innerHTML += 'Mouse on me!<br>';
+    } );
+    myButton.addEventListener("mouseout", function() { 
+        myDiv.innerHTML += 'Mouse is not on me!<br>';
+    } );
+</script> -->
+
+
+<!-- ****************  task  6  ************************ -->
+<!--
+<script>
+    document.writeln('Width: ' + screen.availWidth + ', ' + 'Height: ' + screen.availHeight);
+</script> -->
+
+
+<!-- ****************  task  7  ************************ -->
+<!-- somehow getting an error - Cannot read property 'text' from line 176   -->
+
+<!-- <select name="country" id="country">
+	<option value="ger">Germany</option>
+	<option value="ua">Ukraine</option>
+	<option value="uk">United Kingdom</option>
+</select>
+                    
+<select name="cities" id="cities"></select>
+<p></p>
+
+<script>
+    
+    const cityArray = {
+        'ger': ['Berlin', 'Dortmund', 'Munich', 'Hamburg'],
+        'ua': ['Lviv', 'Kyiv', 'Odesa', 'Ternopil'],
+        'uk': ['London', 'Oxford', 'Durham', 'Birmingham', 'Belfast'],
+    }
+
+    let main_select = document.getElementById('country');
+    main_select.addEventListener('change', myFunc);
+    main_select.addEventListener('change', toPar);
+
+    let city_select = document.getElementById('cities');
+    city_select.addEventListener('change', toPar);
+
+    function myFunc() {
+        city_select.innerHTML = '';
+        let selectedCountry = main_select.value;
+        for (let i = 0; i < cityArray[selectedCountry].lenght; i++) {
+            let newOption = document.createElement('option');
+            newOption.innerHTML = cityArray[selectedCountry][i];
+            city_select.appendChild(newOption);
+        }
+    }
+
+    let parag = document.querySelector('p');
+    function toPar() {
+        parag.innerHTML = '';
+        parag.innerHTML = main_select.options[main_select.selectedIndex].text + ', ' + city_select.options[city_select.selectedIndex].text;
+    }
+</script> -->
+
+
+</body>
+</html>

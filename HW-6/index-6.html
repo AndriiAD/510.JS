@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 6</title>
+</head>
+<body>
+    
+    <!-- ***************   task 1  ************************ -->
+    <!-- <div id="test">First</div>
+    <script>
+        test.innerHTML = 'Last';
+
+        let d = document.body.children[0];
+        d.innerHTML = 'Last Last one!'
+    </script> -->
+
+
+    <!-- ***************   task 2  ************************ -->
+    <!-- <img class="image" src="dog.jpg">
+    
+    <script>
+        let f = document.body.children[0];
+        alert(f.outerHTML);
+
+        f.src = "cat.jpg";
+        alert(f.outerHTML); 
+    </script> -->
+
+
+<!-- ***************   task 3  ************************-->
+<!-- Don't understand why I am not getting any result form it -->
+
+    <!-- <h2>Article header</h2>      
+    <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+    </div>
+    <p>Another text</p>
+
+    <script>
+        let x = document.querySelectorAll('div.p');
+        let i;
+        for (i = 0; i < x.length; i++) {
+        console.log('Selector text ' + x.keys(i) + ': ' + x.values(i));
+        }
+
+    </script> -->
+
+
+
+<!-- ***************   task 4  ************************-->
+
+<!-- <ul id = "list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+<script>
+    // ----------- version 2 ------------
+
+    // let output = document.getElementById('list');
+    //     output1 = output.firstElementChild.innerHTML;
+    //     output2 = output.lastElementChild.innerHTML;
+    //     output3 = output.firstElementChild.nextElementSibling.innerHTML;
+    //     output4 = output.lastElementChild.previousElementSibling.innerHTML;
+    //     output5 = output.children[2].innerHTML;
+    // alert(output1 + ', ' + output2 + ', ' + output3 + ', ' + output4 + ', ' + output5);
+
+// ----------- version 2 ------------
+// somehow this piece does not want to read 'innerHTML'
+
+    let ulElement = document.getElementsByTagName("ul");
+
+    alert(ulElement.firstChild.innerHTML + ', ' + ulElement.lastChild.innerHTML + ', ' + ulElement.firstChild.nextSibling.innerHTML + ', ' + ', ' + ulElement.childNodes[3].innerHTML + ', ' + ulElement.children[children.length-2].innerHTMLs);
+
+</script> -->
+
+
+<!-- ***************   task 5  ************************-->
+
+<!-- <h1>I'am a big header!!!</h1>
+<div id="myDiv">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+</div>
+<ul id="myList">
+    <li>Make</li>
+    <li>me</li>
+    <li>horizontal!</li>
+</ul>
+<span>Make me invisible, please!</span>
+
+<script>
+    document.body.firstElementChild.style.background = 'lightgreen';
+
+    let myDiv = document.querySelectorAll('div.myDiv');
+    myDiv.firstElementChild.style.fontWeight = 'bolder';
+    myDiv.children[1].style.color = 'red';
+    myDiv.lastElementChild.previousElementSibling.style.textDecoration = 'underline';
+    myDiv.lastElementChild.style.font = 'italic';
+
+    document.getElementById('myList').lastElementChild.innerHTML = 'vertical!';
+    document.getElementById('myList').style.display = 'inline-flex';
+
+    document.getElementsByTagName('span').style.visibility = 'hidden';
+
+</script> -->
+
+
+<!-- ***************   task 6  ************************-->
+
+<!-- <input type="text" id="input1" value="Text1">
+<input type="text" id="input2" value="Text2">
+
+<script>
+    let input1 = document.getElementById('input1')
+    input1.value = prompt('Please, enter your first message.', 'Message');
+    let input2 = document.getElementById('input2')
+    input2.value = prompt('Please, enter your second message.', 'Message');
+
+    let temp = input1.value;
+    input1.value = input2.value;
+    input2.value = temp;
+</script> -->
+
+
+<!-- ***************   task 7  ************************-->
+
+<script>
+    let newParagraph = document.createElement('p');
+        newParagraph.innerHTML = document.createTextNode('First paragraph');
+    let newDiv = document.createElement('div');
+        newDiv.id = 'myDiv';
+        newDiv.innerHTML = newParagraph;
+    let newMain = document.createElement('main');
+        newMain.className = 'mainClass check item';
+        newMain.innerHTML = newDiv;
+</script>
+    
+</body>
+</html>

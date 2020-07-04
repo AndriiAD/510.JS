@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="dataStorage">
+        <button id='myButton' onclick="loadData()">Download books</button>
+    </div>
+
+  <script>
+    function loadData() {
+      const ajaxRequest = new XMLHttpRequest();
+
+      ajaxRequest.open('GET', 'books.json', true);
+
+
+
+      ajaxRequest.onreadystatechange = function() { 
+        if (ajaxRequest.readyState != 4) return;
+
+        if (ajaxRequest.status != 200) {
+          
+          alert('Error ' + ajaxRequest.status + ': ' + ajaxRequest.statusText);
+        } else {
+                 
+          document.getElementById("dataStorage").innerHTML = ajaxRequest.responseText;
+        }
+      }
+      ajaxRequest.send();
+    }
+  </script>
+
+</body>
+
+</html>
